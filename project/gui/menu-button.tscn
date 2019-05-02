@@ -23,16 +23,16 @@ tracks/0/keys = {
 resource_name = "normal"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("label/root:scale")
+tracks/0/path = NodePath("scale-node:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 0.554785 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ) ]
+"values": [ Vector2( 0.9, 0.9 ), Vector2( 1, 1 ) ]
 }
 
 [node name="label" type="AnimationPlayer"]
@@ -48,3 +48,5 @@ margin_right = 40.0
 margin_bottom = 14.0
 theme = ExtResource( 2 )
 text = "Lorem Ipsum"
+[connection signal="mouse_entered" from="scale-node/label-node" to="." method="_on_labelnode_mouse_entered"]
+[connection signal="mouse_exited" from="scale-node/label-node" to="." method="_on_labelnode_mouse_exited"]

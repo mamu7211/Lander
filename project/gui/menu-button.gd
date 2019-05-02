@@ -20,9 +20,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_labeltext_mouse_entered():
+func _on_labelnode_mouse_entered():
 	play("hover")
 
 
-func _on_labeltext_mouse_exited():
+func _on_labelnode_mouse_exited():
 	play("normal")
