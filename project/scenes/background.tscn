@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/background.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/001_moon-bg.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/002_moon-mountains-bg.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/003_moon-mountains.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/004_moon-landing.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/005_moon-foreground.png" type="Texture" id=6]
+
+[node name="background" type="Node2D"]
+position = Vector2( 683, 380 )
+script = ExtResource( 1 )
+
+[node name="bg" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="mountain-back" type="Sprite" parent="."]
+position = Vector2( -13, 240 )
+texture = ExtResource( 3 )
+
+[node name="mountain-mid" type="Sprite" parent="."]
+position = Vector2( 17, 240 )
+texture = ExtResource( 4 )
+
+[node name="landing" type="Sprite" parent="."]
+position = Vector2( -13, 310 )
+texture = ExtResource( 5 )
+
+[node name="fg" type="Sprite" parent="."]
+position = Vector2( -3, 410 )
+texture = ExtResource( 6 )
