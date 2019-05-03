@@ -18,8 +18,8 @@ func _ready():
 	_offset_mountain_back = $"mountain-back".offset
 	_size_mountain_mid = $"mountain-mid".get_rect().size
 	_offset_mountain_mid = $"mountain-mid".offset
-	_size_landing = $landing.get_rect().size
-	_offset_landing = $landing.offset
+	_size_landing = $"landing/sprite".get_rect().size #$landing.sprite.get_rect().size
+	_offset_landing = $landing/sprite.offset
 	_size_fg = $fg.get_rect().size
 	_offset_fg = $fg.offset
 
@@ -48,7 +48,7 @@ func _process(delta):
 	mx = (_size_landing.x - _size_bg.x) * factor.x
 	my = -(_size_landing.y/2) * factor.y
 	mt_parallax_offset = Vector2(mx,my)
-	$"landing".offset = _offset_landing + mt_parallax_offset
+	$"landing/sprite".offset = _offset_landing + mt_parallax_offset
 	
 	mx = (_size_fg.x - _size_bg.x) * factor.x
 	my = -(_size_fg.y) * factor.y
